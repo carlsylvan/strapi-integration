@@ -11,4 +11,14 @@ export class CmsClient {
         const response = await client.get('/televisions');
         return response.data;
     }
+
+    public async getTelevision(id: number): Promise<any> {
+        const response = await client.get(`televisions/${id}`);
+        return response.data;
+    }
+
+    public async deleteTelevision(id: number): Promise<any> {
+        const response = await client.delete(`televisions/${id}`);
+        return response.data;
+    }
 }
