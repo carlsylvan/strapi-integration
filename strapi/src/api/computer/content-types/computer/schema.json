@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "computers",
+  "info": {
+    "singularName": "computer",
+    "pluralName": "computers",
+    "displayName": "computer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "processor": {
+      "type": "string"
+    }
+  }
+}
