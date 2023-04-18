@@ -13,12 +13,22 @@ export class CmsClient {
     }
 
     public async getTelevision(id: number): Promise<any> {
-        const response = await client.get(`televisions/${id}`);
+        const response = await client.get(`/televisions/${id}`);
         return response.data;
     }
 
     public async deleteTelevision(id: number): Promise<any> {
-        const response = await client.delete(`televisions/${id}`);
+        const response = await client.delete(`/televisions/${id}`);
+        return response.data;
+    }
+
+    public async postTelevision(): Promise<any> {
+        const response = await client.post('/televisions');
+        return response.data;
+    }
+
+    public async updateTelevision(id: number): Promise<any> {
+        const response = await client.put(`/televisions/${id}`);
         return response.data;
     }
 }

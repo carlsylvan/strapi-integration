@@ -25,6 +25,21 @@ export class TelevisionsController {
             res.sendStatus(200);
         } catch (error) {
             res.sendStatus(500);
-        }
-    }
+        };
+    };
+
+    public async postTelevision(req: Request, res: Response) {
+        const data = await this.client.postTelevision();
+        res.send(data.data);
+    };
+
+    public async updateTelevision(req: Request, res: Response) {
+        const id = +req.params.id;
+        try {
+            await this.client.updateTelevision(id);
+            res.sendStatus(200);
+        } catch (error) {
+            res.sendStatus(500);
+        };
+    };
 }
