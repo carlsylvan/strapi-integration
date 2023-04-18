@@ -14,7 +14,7 @@ export class TelevisionsController {
 
     public async getTelevision(req: Request, res: Response) {
         const id = +req.params.id;
-        const data = await this.client.getTelevisions(id);
+        const data = await this.client.getTelevision(id);
         res.send(data.data);
     }
 
