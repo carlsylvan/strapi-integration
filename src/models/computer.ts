@@ -1,4 +1,4 @@
-export interface Computer {
+export interface IComputer {
     name: string;
     description: string;
     brand: string;

@@ -1,4 +1,4 @@
-export interface Television {
+export interface ITelevision {
     name: string;
     description: string;
     brand: string;
