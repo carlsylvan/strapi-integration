@@ -5,9 +5,9 @@ import { ComputersController } from "../controllers/computersController";
 const client = new CmsClient();
 const controller = new ComputersController(client);
 
-export const computersController = express.Router();
+export const computersRouter = express.Router();
 
-computersController.get('/', controller.getComputers.bind(controller))
+computersRouter.get('/', controller.getComputers.bind(controller))
                  .get('/:id', controller.getComputer.bind(controller))
                  .delete('/:id', controller.deleteComputer.bind(controller))
                  .post('/', controller.postComputer.bind(controller))
