@@ -21,3 +21,11 @@ app.get('/', (req, res) => {
 app.listen(8008, () => {
     console.log("http://localhost:8008");
 })
+
+// getTelevisions()
+//   .then((response) => {
+//     console.log(response);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
