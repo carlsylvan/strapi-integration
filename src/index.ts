@@ -15,7 +15,7 @@ app.use('/computers', computersRouter);
 app.use('/mobiles', mobilesRouter);
 
 app.get('/', (req, res) => {
-    res.send("strapi-integration")
+    res.send("Carls strapi-integration")
 });
 
 app.listen(8008, () => {
