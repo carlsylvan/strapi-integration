@@ -29,9 +29,13 @@ export class TelevisionsController {
     };
 
     public async postTelevision(req: Request, res: Response) {
-        const data = await this.client.postTelevision();
-        res.send(data.data);
-    };
+        try {
+            const data = await this.client.postTelevision(req.body);
+            res.send(data);
+        } catch (error) {
+            res.sendStatus(500);
+        }
+    }
 
     public async updateTelevision(req: Request, res: Response) {
         const id = +req.params.id;

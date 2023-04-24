@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ITelevision } from "../models/ITelevision";
 
 const client = axios.create({
     baseURL: 'http://localhost:1337/api',
@@ -20,8 +21,9 @@ export class CmsClient {
         const response = await client.delete(`/televisions/${id}`);
         return response.data;
     }
-    public async postTelevision(): Promise<any> {
-        const response = await client.post('/televisions');
+
+    public async postTelevision(television: ITelevision): Promise<any> {
+        const response = await client.post('/televisions', television);
         return response.data;
     }
     public async updateTelevision(id: number): Promise<any> {
