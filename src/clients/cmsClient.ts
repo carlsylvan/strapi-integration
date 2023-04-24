@@ -12,46 +12,46 @@ export class CmsClient {
     constructor () {};
 
     //Televisions
-    public async getTelevisions(): Promise<any> {
+    public async getTelevisions(): Promise<ITelevision[]> {
         const response = await client.get('/televisions');
         return response.data;
     }
-    public async getTelevision(id: number): Promise<any> {
+    public async getTelevision(id: number): Promise<ITelevision> {
         const response = await client.get(`/televisions/${id}`);
         return response.data;
     }
-    public async deleteTelevision(id: number): Promise<any> {
+    public async deleteTelevision(id: number): Promise<void> {
         const response = await client.delete(`/televisions/${id}`);
         return response.data;
     }
 
-    public async postTelevision(television: ITelevision): Promise<any> {
+    public async postTelevision(television: ITelevision): Promise<ITelevision> {
         const response = await client.post('/televisions', television);
         return response.data;
     }
-    public async updateTelevision(television: ITelevision, id: number): Promise<any> {
+    public async updateTelevision(television: ITelevision, id: number): Promise<ITelevision> {
         const response = await client.put(`/televisions/${id}`, television);
         return response.data;
     }
 
     //Audio_devices
-    public async getAudios(): Promise<any> {
+    public async getAudios(): Promise<IAudio[]> {
         const response = await client.get('/audio-devices');
         return response.data;
     }
-    public async getAudio(id: number): Promise<any> {
+    public async getAudio(id: number): Promise<IAudio> {
         const response = await client.get(`/audio-devices/${id}`);
         return response.data;
     }
-    public async deleteAudio(id: number): Promise<any> {
+    public async deleteAudio(id: number): Promise<void> {
         const response = await client.delete(`/audio-devices/${id}`);
         return response.data;
     }
-    public async postAudio(audio: IAudio): Promise<any> {
+    public async postAudio(audio: IAudio): Promise<IAudio> {
         const response = await client.post('/audio-devices', audio);
         return response.data;
     }
-    public async updateAudio(audio: IAudio, id: number): Promise<any> {
+    public async updateAudio(audio: IAudio, id: number): Promise<IAudio> {
         const response = await client.put(`/audio-devices/${id}`, audio);
         return response.data;
     }

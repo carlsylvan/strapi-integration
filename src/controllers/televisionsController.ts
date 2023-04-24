@@ -9,13 +9,13 @@ export class TelevisionsController {
 
     public async getTelevisions(req: Request, res: Response) {
         const data = await this.client.getTelevisions();
-        res.send(data.data);
+        res.send(data);
     }
 
     public async getTelevision(req: Request, res: Response) {
         const id = +req.params.id;
         const data = await this.client.getTelevision(id);
-        res.send(data.data);
+        res.send(data);
     }
 
     public async deleteTelevision(req: Request, res: Response) {

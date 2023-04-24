@@ -9,13 +9,13 @@ export class AudiosController {
 
     public async getAudios(req: Request, res: Response) {
         const data = await this.client.getAudios();
-        res.send(data.data);
+        res.send(data);
     }
 
     public async getAudio(req: Request, res: Response) {
         const id = +req.params.id;
         const data = await this.client.getAudio(id);
-        res.send(data.data);
+        res.send(data);
     }
 
     public async deleteAudio(req: Request, res: Response) {
@@ -30,7 +30,7 @@ export class AudiosController {
 
     public async postAudio(req: Request, res: Response) {
         const data = await this.client.postAudio(req.body);
-        res.send(data.data);
+        res.send(data);
     };
 
     public async updateAudio(req: Request, res: Response) {
