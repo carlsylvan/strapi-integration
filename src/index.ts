@@ -5,9 +5,6 @@ import { computersRouter } from "./routes/computersRouter";
 import { mobilesRouter } from "./routes/mobilesRouter";
 import dotenv from "dotenv";
 
-
-dotenv.config({path:'./config/config.env'});
-
 const app = express();
 
 app.use(express.json());
