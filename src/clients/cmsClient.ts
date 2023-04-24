@@ -31,23 +31,23 @@ export class CmsClient {
 
     //Audio_devices
     public async getAudio_devices(): Promise<any> {
-        const response = await client.get('/audio_devices');
+        const response = await client.get('/audio-devices');
         return response.data;
     }
     public async getAudio_device(id: number): Promise<any> {
-        const response = await client.get(`/audio_devices/${id}`);
+        const response = await client.get(`/audio-devices/${id}`);
         return response.data;
     }
     public async deleteAudio_device(id: number): Promise<any> {
-        const response = await client.delete(`/audio_devices/${id}`);
+        const response = await client.delete(`/audio-devices/${id}`);
         return response.data;
     }
     public async postAudio_device(): Promise<any> {
-        const response = await client.post('/audio_devices');
+        const response = await client.post('/audio-devices');
         return response.data;
     }
     public async updateAudio_device(id: number): Promise<any> {
-        const response = await client.put(`/audio_devices/${id}`);
+        const response = await client.put(`/audio-devices/${id}`);
         return response.data;
     }
 
