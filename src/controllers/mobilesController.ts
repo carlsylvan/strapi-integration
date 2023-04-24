@@ -29,14 +29,14 @@ export class MobilesController {
     };
 
     public async postMobile(req: Request, res: Response) {
-        const data = await this.client.postMobile();
+        const data = await this.client.postMobile(req.body);
         res.send(data.data);
     };
 
     public async updateMobile(req: Request, res: Response) {
         const id = +req.params.id;
         try {
-            await this.client.updateMobile(id);
+            await this.client.updateMobile(req.body, id);
             res.sendStatus(200);
         } catch (error) {
             res.sendStatus(500);

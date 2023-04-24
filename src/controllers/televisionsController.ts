@@ -40,7 +40,7 @@ export class TelevisionsController {
     public async updateTelevision(req: Request, res: Response) {
         const id = +req.params.id;
         try {
-            await this.client.updateTelevision(id);
+            await this.client.updateTelevision(req.body, id);
             res.sendStatus(200);
         } catch (error) {
             res.sendStatus(500);
