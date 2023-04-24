@@ -9,13 +9,13 @@ export class ComputersController {
 
     public async getComputers(req: Request, res: Response) {
         const data = await this.client.getComputers();
-        res.send(data.data);
+        res.send(data);
     }
 
     public async getComputer(req: Request, res: Response) {
         const id = +req.params.id;
         const data = await this.client.getComputer(id);
-        res.send(data.data);
+        res.send(data);
     }
 
     public async deleteComputer(req: Request, res: Response) {
@@ -30,7 +30,7 @@ export class ComputersController {
 
     public async postComputer(req: Request, res: Response) {
         const data = await this.client.postComputer(req.body);
-        res.send(data.data);
+        res.send(data);
     };
 
     public async updateComputer(req: Request, res: Response) {

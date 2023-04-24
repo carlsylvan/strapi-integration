@@ -9,13 +9,13 @@ export class MobilesController {
 
     public async getMobiles(req: Request, res: Response) {
         const data = await this.client.getMobiles();
-        res.send(data.data);
+        res.send(data);
     }
 
     public async getMobile(req: Request, res: Response) {
         const id = +req.params.id;
         const data = await this.client.getMobile(id);
-        res.send(data.data);
+        res.send(data);
     }
 
     public async deleteMobile(req: Request, res: Response) {
@@ -30,7 +30,7 @@ export class MobilesController {
 
     public async postMobile(req: Request, res: Response) {
         const data = await this.client.postMobile(req.body);
-        res.send(data.data);
+        res.send(data);
     };
 
     public async updateMobile(req: Request, res: Response) {

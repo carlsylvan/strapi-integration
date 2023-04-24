@@ -57,19 +57,19 @@ export class CmsClient {
     }
 
     //Computers
-    public async getComputers(): Promise<any> {
+    public async getComputers(): Promise<IComputer[]> {
         const response = await client.get('/computers');
         return response.data;
     }
-    public async getComputer(id: number): Promise<any> {
+    public async getComputer(id: number): Promise<IComputer> {
         const response = await client.get(`/computers/${id}`);
         return response.data;
     }
-    public async deleteComputer(id: number): Promise<any> {
+    public async deleteComputer(id: number): Promise<void> {
         const response = await client.delete(`/computers/${id}`);
         return response.data;
     }
-    public async postComputer(computer: IComputer): Promise<any> {
+    public async postComputer(computer: IComputer): Promise<IComputer> {
         const response = await client.post('/computers', computer);
         return response.data;
     }
@@ -79,23 +79,23 @@ export class CmsClient {
     }
 
     //Mobiles
-    public async getMobiles(): Promise<any> {
+    public async getMobiles(): Promise<IMobile[]> {
         const response = await client.get('/mobiles');
         return response.data;
     }
-    public async getMobile(id: number): Promise<any> {
+    public async getMobile(id: number): Promise<IMobile> {
         const response = await client.get(`/mobiles/${id}`);
         return response.data;
     }
-    public async deleteMobile(id: number): Promise<any> {
+    public async deleteMobile(id: number): Promise<void> {
         const response = await client.delete(`/mobiles/${id}`);
         return response.data;
     }
-    public async postMobile(mobile: IMobile): Promise<any> {
+    public async postMobile(mobile: IMobile): Promise<IMobile> {
         const response = await client.post('/mobiles', mobile);
         return response.data;
     }
-    public async updateMobile(mobile: IMobile, id: number): Promise<any> {
+    public async updateMobile(mobile: IMobile, id: number): Promise<IMobile> {
         const response = await client.put(`/mobiles/${id}`, mobile);
         return response.data;
     }
