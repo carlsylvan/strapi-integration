@@ -1,8 +1,8 @@
 # strapi-integration
 
-"npm install" i /strapi-integration & i /strapi-integration/strapi
-"npm run develop" i /strapi-integration/strapi för att starta strapi (http://localhost:1337)
-"npm start" i /strapi-integration för att starta server (http://localhost:8008)
+"npm install" i /strapi-integration & i /strapi-integration/strapi  
+"npm run develop" i /strapi-integration/strapi för att starta strapi (http://localhost:1337)  
+"npm start" i /strapi-integration för att starta server (http://localhost:8008)  
 
 Endpoints för elektronik:
 "/computers"
