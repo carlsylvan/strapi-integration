@@ -11,5 +11,5 @@ export const computersRouter = express.Router();
 computersRouter.get('/', controller.getComputers.bind(controller))
                  .get('/:id', controller.getComputer.bind(controller))
                  .delete('/:id', forceAuthorize, controller.deleteComputer.bind(controller))
-                 .post('/', controller.postComputer.bind(controller))
-                 .put('/:id', controller.updateComputer.bind(controller));
+                 .post('/', forceAuthorize, controller.postComputer.bind(controller))
+                 .put('/:id', forceAuthorize, controller.updateComputer.bind(controller));

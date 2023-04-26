@@ -5,7 +5,7 @@ import { AuthController } from '../controllers/authController';
 
 authRouter.get('/', (req: any, res) => {
     console.log(req.user);
-    res.send("balvlalva")
+    res.send("lalala")
 
     // res.send(req.user)
 })
